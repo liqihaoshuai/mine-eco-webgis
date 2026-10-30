@@ -1,0 +1,395 @@
+{
+  "version": 1,
+  "note": "评价指标与地形指标的唯一定义源。GeoServer SLD、matplotlib 专题图、前端图例三处均从此文件读取，修改本文件后请执行 sync_metric_styles.py 同步到前端。",
+  "metrics": {
+    "fvc": {
+      "label": "FVC 植被覆盖度",
+      "short": "FVC",
+      "unit": "%",
+      "type": "continuous",
+      "direction": "high-good",
+      "directionLabel": "高值优",
+      "description": "数值越高，植被覆盖越好，深绿色为覆盖度高的区域。",
+      "min": 0,
+      "max": 100,
+      "ticks": [
+        0,
+        20,
+        40,
+        60,
+        80,
+        100
+      ],
+      "stops": [
+        {
+          "value": 0,
+          "color": "#f1f8e9"
+        },
+        {
+          "value": 20,
+          "color": "#dcedc8"
+        },
+        {
+          "value": 40,
+          "color": "#aed581"
+        },
+        {
+          "value": 60,
+          "color": "#7cb342"
+        },
+        {
+          "value": 80,
+          "color": "#558b2f"
+        },
+        {
+          "value": 100,
+          "color": "#1b5e20"
+        }
+      ]
+    },
+    "vri": {
+      "label": "VRI 植被恢复指数",
+      "short": "VRI",
+      "unit": "",
+      "type": "continuous",
+      "direction": "high-good",
+      "directionLabel": "高值优",
+      "description": "正值表示植被恢复，负值表示退化，接近 0 表示变化不明显。",
+      "min": -1,
+      "max": 1,
+      "ticks": [
+        -1,
+        -0.3,
+        0,
+        0.3,
+        0.7,
+        1
+      ],
+      "stops": [
+        {
+          "value": -1,
+          "color": "#8c510a"
+        },
+        {
+          "value": -0.35,
+          "color": "#e8d9b8"
+        },
+        {
+          "value": -0.1,
+          "color": "#cfd8e3"
+        },
+        {
+          "value": 0,
+          "color": "#b8c6d4"
+        },
+        {
+          "value": 0.1,
+          "color": "#9fc0d8"
+        },
+        {
+          "value": 0.35,
+          "color": "#5b9bc4"
+        },
+        {
+          "value": 1,
+          "color": "#0b3d5c"
+        }
+      ]
+    },
+    "ndmi": {
+      "label": "NDMI 土壤湿度指数",
+      "short": "NDMI",
+      "unit": "",
+      "type": "continuous",
+      "direction": "high-good",
+      "directionLabel": "高值优",
+      "description": "数值越高，土壤与植被水分越充足，深蓝色为湿润区域。",
+      "min": -1,
+      "max": 1,
+      "ticks": [
+        -1,
+        -0.3,
+        0,
+        0.3,
+        0.7,
+        1
+      ],
+      "stops": [
+        {
+          "value": -1,
+          "color": "#b2182b"
+        },
+        {
+          "value": -0.3,
+          "color": "#ef8a62"
+        },
+        {
+          "value": 0,
+          "color": "#ffffff"
+        },
+        {
+          "value": 0.3,
+          "color": "#67a9cf"
+        },
+        {
+          "value": 0.7,
+          "color": "#2166ac"
+        },
+        {
+          "value": 1,
+          "color": "#053061"
+        }
+      ]
+    },
+    "ndsi": {
+      "label": "NDSI 裸土指数",
+      "short": "NDSI",
+      "unit": "",
+      "type": "continuous",
+      "direction": "low-good",
+      "directionLabel": "低值优",
+      "description": "数值越低表示裸土越少、植被越好，深红色为裸土集中区域。",
+      "min": -1,
+      "max": 1,
+      "ticks": [
+        -1,
+        -0.3,
+        0,
+        0.3,
+        0.7,
+        1
+      ],
+      "stops": [
+        {
+          "value": -1,
+          "color": "#2166ac"
+        },
+        {
+          "value": -0.3,
+          "color": "#67a9cf"
+        },
+        {
+          "value": 0,
+          "color": "#ffffff"
+        },
+        {
+          "value": 0.3,
+          "color": "#f4a582"
+        },
+        {
+          "value": 0.7,
+          "color": "#ca0020"
+        },
+        {
+          "value": 1,
+          "color": "#67001f"
+        }
+      ]
+    },
+    "rsei": {
+      "label": "RSEI 遥感生态指数",
+      "short": "RSEI",
+      "unit": "",
+      "type": "continuous",
+      "direction": "high-good",
+      "directionLabel": "高值优",
+      "description": "数值越高，生态质量越好，绿色为生态优良区域。",
+      "min": 0,
+      "max": 1,
+      "ticks": [
+        0,
+        0.2,
+        0.4,
+        0.6,
+        0.8,
+        1
+      ],
+      "stops": [
+        {
+          "value": 0,
+          "color": "#a50026"
+        },
+        {
+          "value": 0.2,
+          "color": "#d73027"
+        },
+        {
+          "value": 0.4,
+          "color": "#fee08b"
+        },
+        {
+          "value": 0.6,
+          "color": "#d9ef8b"
+        },
+        {
+          "value": 0.8,
+          "color": "#66bd63"
+        },
+        {
+          "value": 1,
+          "color": "#1a9850"
+        }
+      ]
+    },
+    "elevation": {
+      "label": "高程",
+      "short": "高程",
+      "unit": "m",
+      "type": "continuous",
+      "direction": "descriptive",
+      "directionLabel": "描述性",
+      "description": "海拔分布，仅表示地形高低，无优劣之分。",
+      "min": -100,
+      "max": 200,
+      "ticks": [
+        -100,
+        0,
+        50,
+        100,
+        150,
+        200
+      ],
+      "stops": [
+        {
+          "value": -100,
+          "color": "#9ed7eb"
+        },
+        {
+          "value": -50,
+          "color": "#8de0c0"
+        },
+        {
+          "value": 0,
+          "color": "#159447"
+        },
+        {
+          "value": 50,
+          "color": "#f6e58d"
+        },
+        {
+          "value": 100,
+          "color": "#f09a36"
+        },
+        {
+          "value": 150,
+          "color": "#991f26"
+        },
+        {
+          "value": 200,
+          "color": "#d9dde1"
+        }
+      ]
+    },
+    "slope": {
+      "label": "坡度",
+      "short": "坡度",
+      "unit": "°",
+      "type": "continuous",
+      "direction": "descriptive",
+      "directionLabel": "描述性",
+      "description": "坡度越陡，水土流失风险越高，深蓝色为陡坡区域。",
+      "min": 0,
+      "max": 90,
+      "ticks": [
+        0,
+        5,
+        15,
+        30,
+        60,
+        90
+      ],
+      "stops": [
+        {
+          "value": 0,
+          "color": "#ffffcc"
+        },
+        {
+          "value": 5,
+          "color": "#c7e9b4"
+        },
+        {
+          "value": 15,
+          "color": "#7fcdbb"
+        },
+        {
+          "value": 30,
+          "color": "#2c7fb8"
+        },
+        {
+          "value": 60,
+          "color": "#253494"
+        },
+        {
+          "value": 90,
+          "color": "#081d58"
+        }
+      ]
+    },
+    "aspect": {
+      "label": "坡向",
+      "short": "坡向",
+      "unit": "°",
+      "type": "circular",
+      "direction": "descriptive",
+      "directionLabel": "描述性",
+      "description": "坡面朝向，影响光照与水分分配，无优劣之分。正北方向首尾取值一致。",
+      "ticks": [
+        0,
+        90,
+        180,
+        270,
+        360
+      ],
+      "sectors": [
+        {
+          "label": "北",
+          "from": 337.5,
+          "to": 22.5,
+          "color": "#c0392b"
+        },
+        {
+          "label": "东北",
+          "from": 22.5,
+          "to": 67.5,
+          "color": "#e67e22"
+        },
+        {
+          "label": "东",
+          "from": 67.5,
+          "to": 112.5,
+          "color": "#f1c40f"
+        },
+        {
+          "label": "东南",
+          "from": 112.5,
+          "to": 157.5,
+          "color": "#7cb342"
+        },
+        {
+          "label": "南",
+          "from": 157.5,
+          "to": 202.5,
+          "color": "#16a085"
+        },
+        {
+          "label": "西南",
+          "from": 202.5,
+          "to": 247.5,
+          "color": "#2e86c1"
+        },
+        {
+          "label": "西",
+          "from": 247.5,
+          "to": 292.5,
+          "color": "#6c5ce7"
+        },
+        {
+          "label": "西北",
+          "from": 292.5,
+          "to": 337.5,
+          "color": "#8e44ad"
+        }
+      ]
+    }
+  }
+}
